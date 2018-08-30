@@ -12,15 +12,19 @@ class CollectionQ6Test {
 	@Test
 	void testStudentFavouriteFruit() {
 		HashMap<String, ArrayList<String>> map= new HashMap<String,ArrayList<String>>();
+		String[] favorites = new String[] {"fasgh","asdyau"};
+		map.put("Sandeep", new ArrayList<>(Arrays.asList(favorites)));
+		favorites = new String[] {"banana","kiwi","orange"};
+		map.put("Sudarshan", new ArrayList<>(Arrays.asList(favorites)));
+		favorites = new String[] {"peru","cockroach"};
+		map.put("Harini", new ArrayList<>(Arrays.asList(favorites)));
+		favorites = new String[] {"peru","papaya","apple"};
+		map.put("Sharad", new ArrayList<>(Arrays.asList(favorites)));
 		
-		String citynames[]={"Agra", "Mysore", "Chandigarh", "Bhopal"};
+		assertEquals(4, map.size());
 
-		  /*Array to ArrayList conversion*/
-		  ArrayList<String> citylist= new ArrayList<String>(Arrays.asList(citynames));
-		 assertEquals(true, map.put("sandeep", citylist));
-		 for(ArrayList<String> key : map.values()) {
-			 System.out.println(key);
-		 }
+		
 	}
-
 }
+
+
