@@ -1,9 +1,11 @@
+package com.sandeep.day6.test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +24,9 @@ class CollectionQ6Test {
 		map.put("Sharad", new ArrayList<>(Arrays.asList(favorites)));
 		
 		assertEquals(4, map.size());
-
+		for (Map.Entry<String,ArrayList<String>> entry : map.entrySet()) 
+            System.out.println("Key = " + entry.getKey() +
+                             ", Value = " + entry.getValue());
 		
 	}
 }
