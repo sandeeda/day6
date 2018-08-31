@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 
 class CollectionQ6Test {
 
+	String [] matchKey;
 	HashMap<String, ArrayList<String>> map= new HashMap<String,ArrayList<String>>();
 	@Test
 	void testStudentFavouriteFruit() {
@@ -20,6 +21,7 @@ class CollectionQ6Test {
 		favorites = new String[] {"banana","kiwi","orange"};
 		map.put("Sudarshan", new ArrayList<>(Arrays.asList(favorites)));
 		favorites = new String[] {"peru","cockroach"};
+		matchKey=favorites;
 		map.put("Harini", new ArrayList<>(Arrays.asList(favorites)));
 		favorites = new String[] {"peru","papaya","apple"};
 		map.put("Sharad", new ArrayList<>(Arrays.asList(favorites)));
@@ -35,7 +37,7 @@ class CollectionQ6Test {
 	@Test
 	void testSearchFavouriteFood()
 	{
-		assertEquals(new ArrayList<>(Arrays.asList(new String[] {"fasgh","asdyau"})),("Harini"));
+		assertEquals(matchKey,map.get("Harini"));
 	}
 	
 	/*public boolean SearchFavouriteFood(String name){
