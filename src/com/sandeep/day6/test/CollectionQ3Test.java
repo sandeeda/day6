@@ -25,6 +25,7 @@ class CollectionQ3Test {
 		assertEquals(true, stud.add(new Student("Harini", 62, "ME")));
 		
 		
+		
 		System.out.println(stud);
 		
 	}
