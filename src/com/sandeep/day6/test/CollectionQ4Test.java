@@ -27,6 +27,12 @@ class CollectionQ4Test {
 		
 		System.out.println(stud);
 		
+		
+		//==============================test whether sorted or not==========================//
+		
+		assertEquals(0,new Student("Harini", 62, "ME").compareTo(stud.first()));
+		assertEquals(0,new Student("Sudarshan", 32, "CSE").compareTo(stud.last()));
+		
 	}
 
 }
